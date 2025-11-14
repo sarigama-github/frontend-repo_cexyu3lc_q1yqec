@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import Test from './Test'
+import Album from './pages/Album'
+import Contact from './pages/Contact'
+import Admin from './pages/Admin'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,6 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/album/:id" element={<Album />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>
